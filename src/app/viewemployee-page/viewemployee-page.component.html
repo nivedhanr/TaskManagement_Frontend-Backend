@@ -1,0 +1,66 @@
+
+<app-employeenavbar></app-employeenavbar>
+<div class="form-container" >
+    <div class="form-reg">
+      <div class="column">
+        
+            <div *ngIf="imageDataUrl">
+                <label for="imgUrl" class="form-label">Profile Photo:</label>
+                <img [src]="imageDataUrl" alt="User Photo" class="image-size">
+              </div>
+        
+        <div>
+            <label for="name" class="form-label">Employee Code</label>
+            <p class="form-control" >{{ userDetails?.empcode }}</p>
+            
+          </div>
+        
+        <div>
+          <label for="name" class="form-label">Name</label>
+          <p class="form-control" >{{ userDetails?.name }}</p>
+          
+        </div>
+        
+        <div>
+            <label for="phn" class="form-label" >Phone Number</label>
+            <p class="form-control" >{{ userDetails?.phn }}</p>
+            
+        </div>
+        <div>
+            <label for="address" class="form-label">Address</label>
+            <p class="form-control" >{{ userDetails?.address }}</p>
+            
+        </div>
+        <div>
+            <label for="designation" class="form-label" >Designation</label>
+            <p class="form-control" >{{ userDetails?.designation }}</p>
+            
+        </div>
+        <div>
+            <label for="gender" class="form-label" >Gender</label>
+            <p class="form-control" >{{ userDetails?.gender }}</p>
+            
+        </div>
+    </div>
+    <div class="column">
+        
+        <div>
+            <label for="email" class="form-label" >Email Id</label>
+            <p class="form-control" >{{ userDetails?.email }}</p>
+            
+        </div>
+        <div>
+            <label for="username" class="form-label" >User Name</label>
+            <p class="form-control" >{{ userDetails?.username }}</p>
+            
+        </div>
+        <div>
+            <label for="password" class="form-label" >Password</label>
+            <p class="form-control" >{{ userDetails?.password }}</p>
+            
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  

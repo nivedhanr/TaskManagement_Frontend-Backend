@@ -1,0 +1,32 @@
+<app-adminnavbar></app-adminnavbar>
+<div class="register-container">
+    <div class="form-reg">
+        <table class="table" >
+            <thead>
+              <tr>
+                <th>Employee Code</th>
+                <th>Task</th>
+                <th>Description</th>
+                <th>Track</th>
+
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let i of task">
+                
+                <td>{{i.empcode}}</td>
+                <td>{{i.emptask}}</td>
+                <td>{{i.description}}</td>
+                <td>{{i.track}}</td>
+                
+                
+              </tr>
+            </tbody>
+          </table>
+          
+        
+        
+            </div>
+        </div>
+

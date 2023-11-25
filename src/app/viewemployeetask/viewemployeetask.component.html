@@ -1,0 +1,48 @@
+<app-employeenavbar></app-employeenavbar>
+<div class="form-container"  >
+    <div class="form-reg" *ngIf="tasks && tasks.length > 0" >
+      
+      <div class="column" *ngFor="let task of tasks">
+        <form [formGroup]="registrationForm">
+        <div>
+          <label for="empcode" class="form-label">Employee Code</label>
+          <p class="form-control" >{{ task?.empcode }}</p>
+          
+        </div>
+        <div>
+            <label for="emptask" class="form-label" >Task</label>
+            <p class="form-control" >{{ task?.emptask }}</p>
+            
+        </div>
+        <div>
+            <label for="description" class="form-label">Description</label>
+            <p class="form-control" >{{ task?.description }}</p>
+            
+        </div>
+        <div>
+            <label for="track" class="form-label" >Track</label>
+            <p class="form-control" *ngIf="!editMode">{{ task?.track }}</p>
+            <select class="form-select" formControlName="track" id="track" *ngIf="editMode" required>
+              <option [value]="task?.track" selected>{{ task?.track }}</option>
+              <option value="Task Just Assigned">Task Just Assigned</option>
+              <option value="Half Completed">Half Completed</option>
+              <option value="Completed">Completed</option>
+            </select>
+            <div *ngIf="registrationForm.get('track')?.hasError('required') && registrationForm.get('track')?.touched"
+            class="error-text">
+            Track field is required.
+          </div>
+        </div>
+        <div *ngIf="!editMode">
+          <button (click)="editMode = true">Update Status</button>
+        </div>
+  
+        <div *ngIf="editMode">
+          <button (click)="updateTrackForTask(task.id)">Save Changes</button>
+          <button (click)="cancelEdit()">Cancel</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,27 @@
+.form-container {
+    background: linear-gradient(45deg, rgb(129, 129, 129) 0%, rgb(206, 205, 207) 100%); 
+    padding: 20px; 
+    border-radius: 5px; 
+    
+    .form-label{
+        font-weight: bold;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .form-control {
+        
+        background-color: transparent;
+        padding: 3px 0;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 1140px;
+        height: 30px;
+    }
+    .image-size {
+        width: 150px;
+        height: 150px;
+      }
+    
+
+}

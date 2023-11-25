@@ -1,0 +1,49 @@
+<app-adminnavbar></app-adminnavbar>
+<div class="add-container">
+    <div class="form-reg">
+        <form class="form-group" [formGroup]="registrationForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="column">
+                <div>
+                    <label for="empcode" class="form-label">Employee Code</label>
+                    <input type="text" name="empcode" formControlName="empcode" id="empcode" class="form-control" required>
+                    <div *ngIf="registrationForm.get('empcode')?.hasError('required') && registrationForm.get('empcode')?.touched" class="error-text">
+                        Employee Code is required.
+                    </div>
+                </div>
+                <div>
+                    <label for="emptask" class="form-label">Task</label>
+                    <input type="text" name="emptask" formControlName="emptask" id="emptask" class="form-control" required>
+                    <div *ngIf="registrationForm.get('emptask')?.hasError('required') && registrationForm.get('emptask')?.touched" class="error-text">
+                        Task is required.
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" name="description" formControlName="description" id="description" rows="3" required></textarea>
+                    <div *ngIf="registrationForm.get('description')?.hasError('required') && registrationForm.get('description')?.touched" class="error-text">
+                        Description is required.
+                    </div>
+                </div>
+                <div>
+                    <label for="track" class="form-label">Track</label>
+                    <select class="form-select" name="track" formControlName="track" id="track" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Task Just Assigned</option>
+                        <option>Half Completed</option>
+                        <option>Completed</option>
+                    </select>
+                    <div *ngIf="registrationForm.get('track')?.hasError('track') && registrationForm.get('track')?.touched" class="error-text">
+                        Track field is required.
+                    </div>
+                </div>
+                <div>
+                    <br>
+                    <button type="submit" class="btn btn-success" [disabled]="!registrationForm.valid" >Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</div>
+

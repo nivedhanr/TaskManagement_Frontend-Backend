@@ -1,0 +1,30 @@
+.container-login {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/014/468/621/small/abstract-digital-technology-background-with-concept-security-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    .login-head{
+        font-size: 10%;
+        color: aliceblue;
+        text-align: center;
+        right:190px;
+        
+        top:50px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        
+    }
+    .login-form{
+        width: 500px;
+        height: 480px;
+        padding: 20px;
+        
+        top: 60px;
+        right: 50px;
+        
+
+    }
+    .form-label{
+        color: aliceblue;
+    }
+}

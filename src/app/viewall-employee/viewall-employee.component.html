@@ -1,0 +1,38 @@
+<app-adminnavbar></app-adminnavbar>
+<div class="register-container">
+    <div class="form-reg">
+        <table class="table" >
+            <thead>
+              <tr>
+                <th>Employee Code</th>
+                <th>Name</th>
+                <th>phn no</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Gender</th>
+                <th>Designation</th>
+                <th>Username</th>
+
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of userDetails">
+                
+                <td>{{user.empcode}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.phn}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.address}}</td>
+                <td>{{user.gender}}</td>
+                <td>{{user.designation}}</td>
+                <td>{{user.username}}</td>
+                
+              </tr>
+            </tbody>
+          </table>
+          
+        
+        
+            </div>
+        </div>
